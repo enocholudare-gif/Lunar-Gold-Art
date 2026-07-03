@@ -1,0 +1,6 @@
+{
+  "name": "Lunar Gold Art",
+  "description": "Multidisciplinary creative organization blending art, culture, innovation, and technology. Clustering Illusions. Inspiring Development.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
