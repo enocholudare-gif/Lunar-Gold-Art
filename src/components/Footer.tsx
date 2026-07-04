@@ -200,9 +200,18 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenInquiry }) => 
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-          <div>
-            © {new Date().getFullYear()} Lunar Gold Art. All Rights Reserved.
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
+            <span>© {new Date().getFullYear()} Lunar Gold Art. All Rights Reserved.</span>
+            <span className="hidden sm:inline text-[#DCD6CB]">|</span>
+            <a
+              href="https://zamclouds.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#8C6A10] hover:text-[#C59B27] font-semibold transition-colors hover:underline"
+            >
+              Powered by Zambia Cloud Programmers
+            </a>
           </div>
 
           {/* Social Media Buttons */}
