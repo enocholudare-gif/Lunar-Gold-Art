@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/lunargold/public_html
+    - /bin/mkdir -p $DEPLOYPATH
+    - export PATH=$PATH:/usr/local/bin:~/.nvm/versions/node/$(ls ~/.nvm/versions/node 2>/dev/null | tail -n 1)/bin
+    - npm install
+    - npm run build
+    - /bin/cp -R dist/* $DEPLOYPATH
