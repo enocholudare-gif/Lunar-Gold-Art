@@ -2,6 +2,10 @@ import { ServiceItem, CreativeDivision, ArtItem, TimelineEvent, ValueItem, FAQIt
 
 import heroArtworkGold from '../assets/images/hero_artwork_gold_1783113004311.jpg';
 import kenziyaAfrikaArt from '../assets/images/kenziya_afrika_art_1783113017862.jpg';
+import visualArtImg from '../assets/images/visualart.jpg';
+import creativeImg from '../assets/images/creative.jpg';
+import artistImg from '../assets/images/artist.jpg';
+import exhibitionImg from '../assets/images/exhit.jpg';
 import monolithSculpture from '../assets/images/monolith_sculpture_1783113030596.jpg';
 import techLabGenerative from '../assets/images/tech_lab_generative_1783113045653.jpg';
 import organicTextileTapestry from '../assets/images/organic_textile_tapestry_1783113401864.jpg';
@@ -20,7 +24,7 @@ export const BRAND = {
   email: 'contact@lunargoldart.com',
   phone: '+1 (800) 586-2787',
   locations: [
-    { city: 'Lagos', detail: 'Victoria Island Creative Sanctuary', country: 'Nigeria' },
+    { city: 'Lagos', detail: 'Victoria Island Creative Hub', country: 'Nigeria' },
     { city: 'London', detail: 'Mayfair Cultural Exchange', country: 'United Kingdom' },
     { city: 'Paris', detail: 'Le Marais Innovation Atelier', country: 'France' },
   ],
@@ -47,7 +51,7 @@ export const SERVICES: ServiceItem[] = [
     tagline: 'Sculpting contemporary narratives through masterwork paintings, sculptures, and mixed media.',
     description: 'Our visual arts division curates and commissions extraordinary works of art that bridge heritage and futuristic aesthetics. We collaborate with master painters, sculptors, and digital artists to bring vision into tangible reality.',
     deliverables: ['Custom Canvas Commissions', 'Contemporary Sculptures', 'Mixed Media Installations', 'Fine Art Acquisitions'],
-    image: fineArtPaintingStudio,
+    image: visualArtImg,
     iconName: 'Palette',
     featured: true,
   },
@@ -58,7 +62,7 @@ export const SERVICES: ServiceItem[] = [
     tagline: 'Architecting cohesive visual identities, artistic themes, and high-concept physical environments.',
     description: 'We orchestrate full-scale creative direction for luxury institutions, cultural exhibitions, and global brands seeking authentic artistic resonance and flawless aesthetic execution.',
     deliverables: ['Brand Visual Identity', 'Exhibition Concepting', 'Editorial & Spatial Direction', 'Artistic Curation Frameworks'],
-    image: heroArtworkGold,
+    image: creativeImg,
     iconName: 'Compass',
     featured: true,
   },
@@ -67,7 +71,7 @@ export const SERVICES: ServiceItem[] = [
     title: 'Art Installations',
     category: 'Spatial Experiences',
     tagline: 'Immersive, monumental spatial installations that provoke thought and redefine architectural spaces.',
-    description: 'Transforming public plazas, gallery halls, and corporate headquarters into sensory artistic sanctuaries. Our installations combine organic elements, dynamic lighting, and spatial audio.',
+    description: 'Transforming public plazas, gallery halls, and corporate headquarters into sensory artistic environments. Our installations combine organic elements, dynamic lighting, and spatial audio.',
     deliverables: ['Site-Specific Sculptures', 'Light & Kinetic Installations', 'Acoustic Spatial Art', 'Interactive Public Works'],
     image: monolithSculpture,
     iconName: 'Boxes',
@@ -102,7 +106,7 @@ export const SERVICES: ServiceItem[] = [
     tagline: 'Breaking barriers and providing emerging creators with masterclass mentorship and global platforms.',
     description: 'Rooted in our founding mission, we eliminate traditional gatekeeping by offering artist residency programs, business literacy for creators, international gallery placement, and production grants.',
     deliverables: ['Residency Fellowships', 'Portfolio Optimization', 'Global Gallery Placement', 'Grant & Resource Allocations'],
-    image: artistResidencyStudio,
+    image: artistImg,
     iconName: 'UserCheck',
     featured: true,
   },
@@ -135,7 +139,7 @@ export const SERVICES: ServiceItem[] = [
     tagline: 'Designing immersive museum exhibitions, pop-up gallery shows, and hybrid digital showcases.',
     description: 'From physical gallery curation in Paris and London to interactive online showcases, we craft exhibition spaces that engage the intellect and spark emotional wonder.',
     deliverables: ['Museum-Grade Curation', 'Spatial Lighting & Layout', 'Exhibition Catalogs', 'Virtual Hybrid Showrooms'],
-    image: museumExhibitionHall,
+    image: exhibitionImg,
     iconName: 'Frame',
     featured: true,
   },
@@ -159,7 +163,7 @@ export const CREATIVE_FAMILY: CreativeDivision[] = [
     tagline: 'Celebrating Extraordinary African Artistic Excellence',
     description: 'Kenziya Afrika is a flagship initiative recognized through kenziyaafrika.com for its exceptional celebration of African creativity, contemporary fine art, and cultural heritage. It serves as a premier showcase and gallery platform elevating visionary African artists to the global stage while preserving authentic cultural identities.',
     website: 'https://kenziyaafrika.com',
-    image: kenziyaAfrikaArt,
+    image: visualArtImg,
     category: 'Flagship Cultural Initiative',
     highlights: [
       'Dedicated African Fine Art Curation',
@@ -185,11 +189,11 @@ export const CREATIVE_FAMILY: CreativeDivision[] = [
     featured: true,
   },
   {
-    id: 'sanctuary-exhibitions',
-    name: 'Sanctuary Exhibitions',
+    id: 'gallery-exhibitions',
+    name: 'Gallery Exhibitions',
     tagline: 'Physical Museums & Gallery Spaces',
-    description: 'Managing bespoke gallery sanctuaries and exhibition pavilions globally. Sanctuary creates serene, minimalist environments where art can be experienced with reverence and intimacy.',
-    image: luxuryGallerySanctuary,
+    description: 'Managing bespoke gallery spaces and exhibition pavilions globally. Creating serene, minimalist environments where art can be experienced with reverence and intimacy.',
+    image: exhibitionImg,
     category: 'Exhibition Network',
     highlights: [
       'International Gallery Pavilion Network',
@@ -204,7 +208,7 @@ export const CREATIVE_FAMILY: CreativeDivision[] = [
     name: 'Horizon Residency',
     tagline: 'Global Artist Incubator & Fellowships',
     description: 'An international residency initiative providing selected artists with spacious studio retreats, stipend grants, material support, and direct mentorship from industry visionaries.',
-    image: artistResidencyStudio,
+    image: artistImg,
     category: 'Artist Incubator',
     highlights: [
       'Fully Funded Studio Residencies',
@@ -234,15 +238,15 @@ export const CREATIVE_FAMILY: CreativeDivision[] = [
 export const ARTWORKS: ArtItem[] = [
   {
     id: 'art-1',
-    title: 'The Golden Eclipse',
-    artist: 'Kenziya Afrika Collective',
-    category: 'Mixed Media & Gold Leaf',
-    year: '2025',
-    medium: 'Pigment, Gold Leaf, Recycled Bronze on Canvas',
-    image: heroArtworkGold,
-    description: 'A study on time, resilience, and solar geometry. Inspired by ancient African metallurgical symbolism and modern abstract minimalism.',
-    dimensions: '220 x 180 cm',
-    location: 'Lunar Gold Sanctuary, Lagos',
+    title: 'Cosmic Embrace (Creative Direction)',
+    artist: 'Lunar Gold Studio',
+    category: 'Creative Direction & Fine Art',
+    year: '2026',
+    medium: 'Acrylic and Pigment on Canvas',
+    image: creativeImg,
+    description: 'A sublime cosmic embrace rendered in indigo starlight and rich earthy tones. Serving as a pinnacle piece for Lunar Gold Art creative direction.',
+    dimensions: '200 x 140 cm',
+    location: 'Lunar Gold Gallery, Lagos',
   },
   {
     id: 'art-2',
@@ -260,12 +264,12 @@ export const ARTWORKS: ArtItem[] = [
     id: 'art-3',
     title: 'Ancestral Resynchronization',
     artist: 'Amafina Odu',
-    category: 'Fine Art Photography',
+    category: 'Fine Art & Expression',
     year: '2025',
-    medium: 'Archival Giclée Print on Cotton Paper',
-    image: kenziyaAfrikaArt,
-    description: 'A striking portrait series exploring traditional royal ceremonial wear re-imagined through contemporary high fashion lenses.',
-    dimensions: '150 x 100 cm (Edition of 5)',
+    medium: 'Acrylic and Oil on Canvas with Gold Foil Details',
+    image: visualArtImg,
+    description: 'A striking fine art composition celebrating African womanhood, cultural heritage, and vibrant color harmonies.',
+    dimensions: '180 x 135 cm',
     location: 'Private Collection, Paris',
   },
   {
@@ -290,7 +294,7 @@ export const ARTWORKS: ArtItem[] = [
     image: organicTextileTapestry,
     description: 'A tactile tapestry honoring West African textile traditions, celebrating community unity and sustainable craftsmanship.',
     dimensions: '300 x 200 cm',
-    location: 'Sanctuary Gallery, Lagos',
+    location: 'Lunar Gold Gallery, Lagos',
   },
   {
     id: 'art-6',
@@ -303,6 +307,30 @@ export const ARTWORKS: ArtItem[] = [
     description: 'A water-borne kinetic sculpture installation designed for civic waterfronts to foster reflection and cultural pride.',
     dimensions: '600 cm Diameter',
     location: 'Civic Waterfront Park',
+  },
+  {
+    id: 'art-7',
+    title: 'Collective Journey & Lorry Loading (Artist Development)',
+    artist: 'Horizon Residency Masters',
+    category: 'Artist Development & Fine Art',
+    year: '2026',
+    medium: 'Impasto Oil and Pigment on Canvas',
+    image: artistImg,
+    description: 'An expressive impasto painting depicting community collaboration, movement, and the loading of a yellow transport lorry. Symbolizing collective momentum and artist empowerment.',
+    dimensions: '220 x 160 cm',
+    location: 'Lunar Gold Gallery, Lagos',
+  },
+  {
+    id: 'art-8',
+    title: 'Market Canopy Overhead (Exhibition Showcase)',
+    artist: 'Kenziya Afrika Masters',
+    category: 'Exhibitions & Cultural Curation',
+    year: '2026',
+    medium: 'Oil and Acrylic on Canvas',
+    image: exhibitionImg,
+    description: 'A striking bird\'s-eye view painting capturing the lively canopy of colorful triangular market umbrellas in an open-air exhibition. Celebrating human connection and vibrant cultural trade.',
+    dimensions: '200 x 200 cm',
+    location: 'Lunar Gold Exhibition Pavilion, London',
   },
 ];
 
@@ -373,9 +401,9 @@ export const TIMELINE: TimelineEvent[] = [
   },
   {
     year: '2024',
-    title: 'Global Sanctuary Network',
+    title: 'Global Gallery Network',
     subtitle: 'Lagos — London — Paris',
-    description: 'Established permanent exhibition partnerships and physical gallery sanctuaries across major global art capitals, connecting regional creators directly with global collectors.',
+    description: 'Established permanent exhibition partnerships and physical gallery spaces across major global art capitals, connecting regional creators directly with global collectors.',
     category: 'Global Presence',
   },
   {

@@ -112,7 +112,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate, onOpenInqu
             {/* Global Hubs */}
             <div className="bg-[#141414] border border-[#222222] rounded-2xl p-6 sm:p-8 space-y-4">
               <h3 className="text-sm font-bold text-[#F8F7F3] uppercase tracking-wider font-heading">
-                Global Sanctuaries
+                Global Hubs
               </h3>
               <div className="space-y-4 text-xs">
                 {BRAND.locations.map((loc) => (

@@ -152,7 +152,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenInquiry }) => 
                   }}
                   className="hover:text-[#E2BE6A] transition-colors"
                 >
-                  Sanctuary Exhibitions
+                  Gallery Exhibitions
                 </button>
               </li>
               <li>
@@ -183,7 +183,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenInquiry }) => 
           {/* Col 5: Global Hubs */}
           <div>
             <h4 className="text-xs font-bold text-[#F8F7F3] uppercase tracking-wider mb-4 font-heading">
-              Global Sanctuaries
+              Global Hubs
             </h4>
             <div className="space-y-3 text-xs">
               {BRAND.locations.map((loc) => (
