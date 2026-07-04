@@ -6,6 +6,7 @@ import visualArtImg from '../assets/images/visualart.jpg';
 import creativeImg from '../assets/images/creative.jpg';
 import artistImg from '../assets/images/artist.jpg';
 import exhibitionImg from '../assets/images/exhit.jpg';
+import illImg from '../assets/images/ill.jpg';
 import monolithSculpture from '../assets/images/monolith_sculpture_1783113030596.jpg';
 import techLabGenerative from '../assets/images/tech_lab_generative_1783113045653.jpg';
 import organicTextileTapestry from '../assets/images/organic_textile_tapestry_1783113401864.jpg';
@@ -73,7 +74,7 @@ export const SERVICES: ServiceItem[] = [
     tagline: 'Immersive, monumental spatial installations that provoke thought and redefine architectural spaces.',
     description: 'Transforming public plazas, gallery halls, and corporate headquarters into sensory artistic environments. Our installations combine organic elements, dynamic lighting, and spatial audio.',
     deliverables: ['Site-Specific Sculptures', 'Light & Kinetic Installations', 'Acoustic Spatial Art', 'Interactive Public Works'],
-    image: monolithSculpture,
+    image: illImg,
     iconName: 'Boxes',
     featured: true,
   },
@@ -251,14 +252,14 @@ export const ARTWORKS: ArtItem[] = [
   {
     id: 'art-2',
     title: 'Monolith of Illusions',
-    artist: 'Lunar Gold Sculpture Studio',
-    category: 'Sculpture & Public Art',
-    year: '2024',
-    medium: 'Polished Obsidian, Brushed Brass, Dynamic LED',
-    image: monolithSculpture,
-    description: 'An architectural sculpture reflecting light and shadows across urban public spaces. Captures the tagline "Clustering Illusions".',
-    dimensions: '450 x 120 x 120 cm',
-    location: 'Civic Cultural Square, London',
+    artist: 'Lunar Gold Studio',
+    category: 'Fine Art & Expression',
+    year: '2026',
+    medium: 'Pigment and Acrylic on Textured Canvas',
+    image: illImg,
+    description: 'A contemplative fine art composition capturing a seated figure amidst an atmospheric aura of copper and bronze pigment splatters against a light blue gradient backdrop. Captures the theme "Clustering Illusions".',
+    dimensions: '180 x 140 cm',
+    location: 'Lunar Gold Gallery, London',
   },
   {
     id: 'art-3',
