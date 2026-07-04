@@ -28,9 +28,10 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
     setIsLoading(true);
   }, [src]);
 
+  // Handle cached or quickly loaded images
   useEffect(() => {
-    if (imgRef.current && imgRef.current.complete) {
-      if (imgRef.current.naturalWidth > 0) {
+    if (imgRef.current) {
+      if (imgRef.current.complete && imgRef.current.naturalWidth > 0) {
         setIsLoading(false);
       }
     }
@@ -38,20 +39,26 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
 
   const handleError = () => {
     if (!hasError && fallbackSrc && imageSrc !== fallbackSrc) {
+      // First try switching to fallbackSrc without declaring fatal error immediately
       setImageSrc(fallbackSrc);
-      setHasError(true);
+      setIsLoading(true);
     } else {
+      // Both primary and fallback image failed
       setHasError(true);
       setIsLoading(false);
     }
   };
 
+  const handleLoad = () => {
+    setIsLoading(false);
+  };
+
   return (
-    <div className={`relative overflow-hidden bg-[#0A0A0A] ${containerClassName}`}>
+    <div className={`relative overflow-hidden bg-[#EFECE6] ${containerClassName}`}>
       {/* Skeleton Loading State */}
       {isLoading && !hasError && (
-        <div className="absolute inset-0 bg-gradient-to-r from-[#141414] via-[#222222] to-[#141414] animate-pulse z-10 flex items-center justify-center">
-          <div className="w-6 h-6 border-2 border-[#E2BE6A] border-t-transparent rounded-full animate-spin opacity-50" />
+        <div className="absolute inset-0 bg-[#E5E0D8] animate-pulse z-0 flex items-center justify-center">
+          <div className="w-5 h-5 border-2 border-[#C59B27] border-t-transparent rounded-full animate-spin opacity-60" />
         </div>
       )}
 
@@ -62,30 +69,20 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
           ref={imgRef}
           src={imageSrc}
           alt={alt}
-          referrerPolicy="no-referrer"
-          onLoad={() => setIsLoading(false)}
+          onLoad={handleLoad}
           onError={handleError}
-          className={`${className} transition-opacity duration-300 ${
-            isLoading ? 'opacity-30' : 'opacity-100'
+          className={`${className} relative z-1 transition-opacity duration-300 ${
+            isLoading ? 'opacity-0' : 'opacity-100'
           }`}
         />
       ) : (
-        /* Fine Art Aesthetic Fallback Container */
-        <div className="absolute inset-0 bg-gradient-to-br from-[#141414] via-[#0D0D0D] to-[#050505] border border-[#E2BE6A]/20 flex flex-col items-center justify-center p-6 text-center space-y-3">
-          <div className="w-10 h-10 rounded-full bg-[#1A1A1A] border border-[#E2BE6A]/40 flex items-center justify-center text-[#E2BE6A] shadow-inner">
+        /* Fine Art Ambient Background Fallback Container */
+        <div className="absolute inset-0 bg-gradient-to-br from-[#EFECE6] via-[#FAF8F5] to-[#E5E0D8] border border-[#C59B27]/30 flex flex-col items-center justify-center p-6 text-center space-y-2 z-1">
+          <div className="w-10 h-10 rounded-full bg-white border border-[#C59B27]/40 flex items-center justify-center text-[#A88118] shadow-sm">
             <Sparkles className="w-5 h-5 animate-pulse" />
-          </div>
-          <div className="space-y-1">
-            <div className="text-xs font-bold text-[#E2BE6A] font-heading tracking-wider uppercase">
-              {alt || 'Lunar Gold Masterwork'}
-            </div>
-            <div className="text-[10px] text-[#9A9A9A] font-body">
-              Curated Fine Art Showcase
-            </div>
           </div>
         </div>
       )}
     </div>
   );
 };
-

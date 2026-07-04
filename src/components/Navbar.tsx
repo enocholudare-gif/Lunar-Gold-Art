@@ -43,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? 'bg-[#050505]/90 backdrop-blur-md border-b border-[#222222] py-3.5 shadow-2xl'
+            ? 'bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#E2DCD2] py-3.5 shadow-md'
             : 'bg-transparent py-5'
         }`}
       >
@@ -57,22 +57,22 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-center gap-3 group text-left focus:outline-none"
             aria-label="Lunar Gold Art Homepage"
           >
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-[#0A0A0A] border border-[#E2BE6A]/50 flex items-center justify-center group-hover:border-[#E2BE6A] transition-all p-1 shadow-md">
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-[#EFECE6] border border-[#C59B27]/50 flex items-center justify-center group-hover:border-[#C59B27] transition-all p-1 shadow-md">
               <LogoMark showGlow className="w-full h-full" />
             </div>
 
             <div>
-              <span className="font-heading font-extrabold text-base sm:text-lg tracking-tight text-[#F8F7F3] group-hover:text-[#E2BE6A] transition-colors block leading-none">
+              <span className="font-heading font-extrabold text-base sm:text-lg tracking-tight text-[#1A1815] group-hover:text-[#A88118] transition-colors block leading-none">
                 LUNAR GOLD ART
               </span>
-              <span className="text-[10px] text-[#9A9A9A] font-body uppercase tracking-wider hidden sm:block mt-0.5">
+              <span className="text-[10px] text-[#5C564E] font-body uppercase tracking-wider hidden sm:block mt-0.5">
                 Clustering Illusions.
               </span>
             </div>
           </button>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 bg-[#141414]/80 p-1.5 rounded-full border border-[#222222] backdrop-blur-md">
+          <nav className="hidden md:flex items-center gap-1 bg-[#EFECE6]/90 p-1.5 rounded-full border border-[#DCD6CB] backdrop-blur-md shadow-sm">
             {navItems.map((item) => {
               const isActive = currentPage === item.page;
               return (
@@ -84,14 +84,14 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }}
                   className={`relative px-4 py-2 rounded-full text-xs font-medium transition-all ${
                     isActive
-                      ? 'text-[#050505] font-semibold'
-                      : 'text-[#9A9A9A] hover:text-[#F8F7F3]'
+                      ? 'text-white font-semibold'
+                      : 'text-[#5C564E] hover:text-[#1A1815]'
                   }`}
                 >
                   {isActive && (
                     <motion.div
                       layoutId="nav-pill"
-                      className="absolute inset-0 bg-gradient-to-r from-[#E2BE6A] to-[#C9A14A] rounded-full shadow-md"
+                      className="absolute inset-0 bg-gradient-to-r from-[#C59B27] to-[#A88118] rounded-full shadow-md"
                       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -106,20 +106,20 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Command K Search Button */}
             <button
               onClick={onOpenCommandK}
-              className="p-2.5 rounded-full bg-[#141414] text-[#9A9A9A] hover:text-[#E2BE6A] hover:bg-[#1A1A1A] border border-[#222222] transition-all flex items-center gap-2 text-xs"
+              className="p-2.5 rounded-full bg-[#EFECE6] text-[#5C564E] hover:text-[#A88118] hover:bg-[#E5E1D8] border border-[#DCD6CB] transition-all flex items-center gap-2 text-xs"
               title="Search (Cmd + K)"
             >
-              <Search className="w-4 h-4 text-[#E2BE6A]" />
-              <span className="hidden lg:inline text-[11px] text-[#9A9A9A]">Search</span>
-              <kbd className="hidden lg:inline px-1.5 py-0.5 text-[9px] bg-[#050505] text-[#9A9A9A] rounded border border-[#333333]">⌘K</kbd>
+              <Search className="w-4 h-4 text-[#A88118]" />
+              <span className="hidden lg:inline text-[11px] text-[#5C564E]">Search</span>
+              <kbd className="hidden lg:inline px-1.5 py-0.5 text-[9px] bg-[#FAF8F5] text-[#5C564E] rounded border border-[#DCD6CB]">⌘K</kbd>
             </button>
 
             {/* Inquire CTA Button */}
             <button
               onClick={onOpenInquiry}
-              className="py-2.5 px-5 rounded-full bg-gradient-to-r from-[#E2BE6A] to-[#C9A14A] text-[#050505] font-semibold text-xs hover:brightness-110 transition-all shadow-md flex items-center gap-1.5 group"
+              className="py-2.5 px-5 rounded-full bg-gradient-to-r from-[#C59B27] to-[#A88118] text-white font-semibold text-xs hover:brightness-110 transition-all shadow-md flex items-center gap-1.5 group"
             >
-              <Mail className="w-3.5 h-3.5 text-[#050505]" />
+              <Mail className="w-3.5 h-3.5 text-white" />
               <span>Inquire</span>
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>
@@ -129,7 +129,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center gap-2 md:hidden">
             <button
               onClick={onOpenCommandK}
-              className="p-2 rounded-full bg-[#141414] text-[#E2BE6A] border border-[#222222]"
+              className="p-2 rounded-full bg-[#EFECE6] text-[#A88118] border border-[#DCD6CB]"
               aria-label="Search"
             >
               <Search className="w-4 h-4" />
@@ -137,7 +137,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-full bg-[#141414] text-[#F8F7F3] border border-[#222222]"
+              className="p-2.5 rounded-full bg-[#EFECE6] text-[#1A1815] border border-[#DCD6CB]"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -154,7 +154,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-[68px] z-30 bg-[#050505]/95 backdrop-blur-xl border-b border-[#222222] p-6 md:hidden shadow-2xl"
+            className="fixed inset-x-0 top-[68px] z-30 bg-[#F5F3EE]/95 backdrop-blur-xl border-b border-[#DCD6CB] p-6 md:hidden shadow-2xl"
           >
             <div className="flex flex-col space-y-3 mb-6">
               {navItems.map((item) => {
@@ -169,30 +169,30 @@ export const Navbar: React.FC<NavbarProps> = ({
                     }}
                     className={`p-3 rounded-xl text-left font-heading text-base font-semibold transition-all flex items-center justify-between ${
                       isActive
-                        ? 'bg-[#141414] text-[#E2BE6A] border border-[#E2BE6A]/30'
-                        : 'text-[#F8F7F3]/80 hover:bg-[#141414] hover:text-[#F8F7F3]'
+                        ? 'bg-[#EFECE6] text-[#A88118] border border-[#C59B27]/40'
+                        : 'text-[#5C564E] hover:bg-[#EFECE6] hover:text-[#1A1815]'
                     }`}
                   >
                     <span>{item.label}</span>
-                    {isActive && <div className="w-2 h-2 rounded-full bg-[#E2BE6A]" />}
+                    {isActive && <div className="w-2 h-2 rounded-full bg-[#C59B27]" />}
                   </button>
                 );
               })}
             </div>
 
-            <div className="pt-4 border-t border-[#222222] flex flex-col gap-3">
+            <div className="pt-4 border-t border-[#DCD6CB] flex flex-col gap-3">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   onOpenInquiry();
                 }}
-                className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#E2BE6A] to-[#C9A14A] text-[#050505] font-semibold text-sm hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg"
+                className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#C59B27] to-[#A88118] text-white font-semibold text-sm hover:brightness-110 transition-all flex items-center justify-center gap-2 shadow-lg"
               >
                 <Mail className="w-4 h-4" />
                 <span>Initiate Proposal</span>
               </button>
 
-              <div className="text-center text-[11px] text-[#9A9A9A] pt-2">
+              <div className="text-center text-[11px] text-[#5C564E] pt-2">
                 Clustering Illusions. Inspiring Development.
               </div>
             </div>

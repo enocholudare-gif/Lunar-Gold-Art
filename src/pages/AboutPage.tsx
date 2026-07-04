@@ -28,9 +28,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenInquiry 
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#141414] border border-[#E2BE6A]/30 text-xs text-[#E2BE6A] font-semibold uppercase tracking-wider"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#C59B27]/40 text-xs text-[#A88118] font-bold uppercase tracking-wider shadow-xs"
         >
-          <Compass className="w-3.5 h-3.5 text-[#E2BE6A]" />
+          <Compass className="w-3.5 h-3.5 text-[#A88118]" />
           <span>Institutional Legacy & Ethos</span>
         </motion.div>
 
@@ -38,7 +38,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenInquiry 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-4xl sm:text-6xl font-extrabold font-heading text-[#F8F7F3] max-w-4xl mx-auto leading-tight"
+          className="text-4xl sm:text-6xl font-extrabold font-heading text-[#1A1815] max-w-4xl mx-auto leading-tight"
         >
           Art as a Force for Transformation and Human Development.
         </motion.h1>
@@ -47,7 +47,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenInquiry 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-base sm:text-lg text-[#9A9A9A] max-w-3xl mx-auto font-body leading-relaxed"
+          className="text-base sm:text-lg text-[#5C564E] max-w-3xl mx-auto font-body leading-relaxed"
         >
           Lunar Gold Art is a multidisciplinary creative organization that blends art, culture, innovation, and technology to create meaningful experiences and lasting impact.
         </motion.p>
@@ -57,33 +57,33 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenInquiry 
       {/* WHO WE ARE & OUR STORY                            */}
       {/* ================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#141414] border border-[#222222] rounded-3xl p-8 sm:p-12 lg:p-16 space-y-12">
+        <div className="bg-white border border-[#DCD6CB] rounded-3xl p-8 sm:p-12 lg:p-16 space-y-12 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold text-[#E2BE6A] uppercase tracking-wider font-heading">
+              <span className="text-xs font-bold text-[#A88118] uppercase tracking-wider font-heading">
                 Who We Are
               </span>
-              <h2 className="text-3xl font-bold font-heading text-[#F8F7F3]">
+              <h2 className="text-3xl font-bold font-heading text-[#1A1815]">
                 Born from a vision to dismantle barriers and empower artists worldwide.
               </h2>
-              <p className="text-sm text-[#9A9A9A] leading-relaxed font-body">
+              <p className="text-sm text-[#5C564E] leading-relaxed font-body">
                 Founded from the desire to overcome the barriers many creatives face, Lunar Gold Art exists to provide artists with platforms, opportunities, resources, and collaborations that allow talent to flourish without unnecessary gatekeeping.
               </p>
-              <p className="text-sm text-[#9A9A9A] leading-relaxed font-body">
+              <p className="text-sm text-[#5C564E] leading-relaxed font-body">
                 We believe that creativity is one of the world's greatest resources—and when combined with purpose and innovation, it has the power to transform lives, communities, and industries.
               </p>
             </div>
 
             <div className="lg:col-span-6">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#050505] border border-[#E2BE6A]/30 p-2">
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EFECE6] border border-[#C59B27]/40 p-2 shadow-md">
                 <ImageWithFallback
                   src={ARTWORKS[1].image}
                   alt="Lunar Gold Creative Studio Space"
                   className="w-full h-full object-cover rounded-xl"
                   containerClassName="w-full h-full rounded-xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#050505]/85 backdrop-blur-md border border-[#222222] text-xs text-[#E2BE6A] font-semibold">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1815]/40 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-[#DCD6CB] text-xs text-[#A88118] font-bold shadow-sm">
                   Zero Gatekeeping. Maximum Creative Potential.
                 </div>
               </div>
@@ -91,23 +91,23 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenInquiry 
           </div>
 
           {/* Dual Vision & Mission Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-[#222222]">
-            <div className="p-6 rounded-2xl bg-[#050505] border border-[#222222] space-y-3">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#E2BE6A] uppercase tracking-wider">
-                <Sparkles className="w-4 h-4 text-[#E2BE6A]" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-[#DCD6CB]">
+            <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#DCD6CB] space-y-3">
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#A88118] uppercase tracking-wider">
+                <Sparkles className="w-4 h-4 text-[#A88118]" />
                 <span>Our Vision</span>
               </div>
-              <p className="text-sm text-[#F8F7F3] leading-relaxed font-body">
+              <p className="text-sm text-[#1A1815] leading-relaxed font-body font-medium">
                 To build a globally respected creative ecosystem where art, technology, and culture work together to inspire innovation, empower artists, and drive sustainable development.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#050505] border border-[#222222] space-y-3">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#E2BE6A] uppercase tracking-wider">
-                <ShieldCheck className="w-4 h-4 text-[#E2BE6A]" />
+            <div className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#DCD6CB] space-y-3">
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#A88118] uppercase tracking-wider">
+                <ShieldCheck className="w-4 h-4 text-[#A88118]" />
                 <span>Our Mission</span>
               </div>
-              <p className="text-sm text-[#F8F7F3] leading-relaxed font-body">
+              <p className="text-sm text-[#1A1815] leading-relaxed font-body font-medium">
                 To nurture creative talent, develop innovative artistic solutions, preserve cultural identity, and create opportunities through collaboration, education, and responsible use of technology.
               </p>
             </div>
@@ -120,50 +120,50 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenInquiry 
       {/* ================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-bold text-[#E2BE6A] uppercase tracking-wider font-heading">
+          <span className="text-xs font-bold text-[#A88118] uppercase tracking-wider font-heading">
             Philosophical Foundations
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-[#F8F7F3]">
+          <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-[#1A1815]">
             The Lunar Gold Standard
           </h2>
-          <p className="text-sm text-[#9A9A9A] font-body">
+          <p className="text-sm text-[#5C564E] font-body">
             How we combine discipline, cultural reverence, and technological mastery.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-8 rounded-2xl bg-[#141414] border border-[#222222] space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-[#050505] border border-[#E2BE6A]/30 flex items-center justify-center text-[#E2BE6A]">
+          <div className="p-8 rounded-2xl bg-white border border-[#DCD6CB] hover:border-[#C59B27] transition-all space-y-4 shadow-md hover:shadow-lg">
+            <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#C59B27]/40 flex items-center justify-center text-[#A88118]">
               <Heart className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-[#F8F7F3] font-heading">
+            <h3 className="text-xl font-bold text-[#1A1815] font-heading">
               1. Cultural Preservation
             </h3>
-            <p className="text-xs text-[#9A9A9A] leading-relaxed font-body">
+            <p className="text-xs text-[#5C564E] leading-relaxed font-body">
               We protect and amplify authentic heritage, celebrating African fine art and international traditions without tokenization or superficial trends.
             </p>
           </div>
 
-          <div className="p-8 rounded-2xl bg-[#141414] border border-[#222222] space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-[#050505] border border-[#E2BE6A]/30 flex items-center justify-center text-[#E2BE6A]">
+          <div className="p-8 rounded-2xl bg-white border border-[#DCD6CB] hover:border-[#C59B27] transition-all space-y-4 shadow-md hover:shadow-lg">
+            <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#C59B27]/40 flex items-center justify-center text-[#A88118]">
               <Award className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-[#F8F7F3] font-heading">
+            <h3 className="text-xl font-bold text-[#1A1815] font-heading">
               2. Artisanal Excellence
             </h3>
-            <p className="text-xs text-[#9A9A9A] leading-relaxed font-body">
+            <p className="text-xs text-[#5C564E] leading-relaxed font-body">
               Masterwork craftsmanship is non-negotiable. Every canvas, sculpture, publication, and digital interface undergoes meticulous curatorial review.
             </p>
           </div>
 
-          <div className="p-8 rounded-2xl bg-[#141414] border border-[#222222] space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-[#050505] border border-[#E2BE6A]/30 flex items-center justify-center text-[#E2BE6A]">
+          <div className="p-8 rounded-2xl bg-white border border-[#DCD6CB] hover:border-[#C59B27] transition-all space-y-4 shadow-md hover:shadow-lg">
+            <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#C59B27]/40 flex items-center justify-center text-[#A88118]">
               <Globe className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-[#F8F7F3] font-heading">
+            <h3 className="text-xl font-bold text-[#1A1815] font-heading">
               3. Ecosystem Synergy
             </h3>
-            <p className="text-xs text-[#9A9A9A] leading-relaxed font-body">
+            <p className="text-xs text-[#5C564E] leading-relaxed font-body">
               Every initiative—from Kenziya Afrika to Lunar Tech Labs—operates as an interconnected organism where success elevates all member artists.
             </p>
           </div>
@@ -176,11 +176,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenInquiry 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-xs text-[#E2BE6A] font-semibold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-1.5 text-xs text-[#A88118] font-semibold uppercase tracking-wider mb-2">
               <Calendar className="w-4 h-4" />
               <span>Chronological Milestones</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold font-heading text-[#F8F7F3]">
+            <h2 className="text-3xl sm:text-4xl font-bold font-heading text-[#1A1815]">
               Our Journey & Evolution
             </h2>
           </div>
@@ -190,10 +190,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenInquiry 
               <button
                 key={cat}
                 onClick={() => setSelectedTimelineCategory(cat)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+                className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
                   selectedTimelineCategory === cat
-                    ? 'bg-[#E2BE6A] text-[#050505] font-semibold'
-                    : 'bg-[#141414] text-[#9A9A9A] hover:text-[#F8F7F3] border border-[#222222]'
+                    ? 'bg-[#C59B27] text-white shadow-md'
+                    : 'bg-white text-[#5C564E] hover:text-[#1A1815] border border-[#DCD6CB]'
                 }`}
               >
                 {cat}
@@ -203,7 +203,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenInquiry 
         </div>
 
         {/* Vertical Timeline */}
-        <div className="relative border-l border-[#222222] ml-4 sm:ml-8 space-y-10 pl-6 sm:pl-10">
+        <div className="relative border-l border-[#DCD6CB] ml-4 sm:ml-8 space-y-10 pl-6 sm:pl-10">
           {filteredTimeline.map((item, index) => (
             <motion.div
               key={item.year + item.title}
@@ -213,20 +213,20 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenInquiry 
               className="relative group"
             >
               {/* Node Marker */}
-              <div className="absolute -left-[31px] sm:-left-[47px] top-1 w-4 h-4 rounded-full bg-[#141414] border-2 border-[#E2BE6A] group-hover:scale-125 transition-transform" />
+              <div className="absolute -left-[31px] sm:-left-[47px] top-1 w-4 h-4 rounded-full bg-white border-2 border-[#C59B27] group-hover:scale-125 transition-transform shadow-xs" />
 
-              <div className="bg-[#141414] border border-[#222222] group-hover:border-[#E2BE6A]/40 p-6 rounded-2xl transition-all space-y-2">
+              <div className="bg-white border border-[#DCD6CB] group-hover:border-[#C59B27] p-6 rounded-2xl transition-all space-y-2 shadow-md hover:shadow-lg">
                 <div className="flex items-center justify-between text-xs">
-                  <span className="font-bold text-[#E2BE6A] font-heading text-base">{item.year}</span>
-                  <span className="px-2.5 py-0.5 rounded-full bg-[#050505] text-[#9A9A9A] border border-[#222222]">
+                  <span className="font-bold text-[#A88118] font-heading text-base">{item.year}</span>
+                  <span className="px-2.5 py-0.5 rounded-full bg-[#FAF8F5] text-[#5C564E] border border-[#DCD6CB] font-medium">
                     {item.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-[#F8F7F3] font-heading">
+                <h3 className="text-xl font-bold text-[#1A1815] font-heading">
                   {item.title}
                 </h3>
-                <div className="text-xs font-semibold text-[#E2BE6A]">{item.subtitle}</div>
-                <p className="text-xs text-[#9A9A9A] leading-relaxed font-body pt-1">
+                <div className="text-xs font-bold text-[#A88118]">{item.subtitle}</div>
+                <p className="text-xs text-[#5C564E] leading-relaxed font-body pt-1">
                   {item.description}
                 </p>
               </div>
@@ -239,16 +239,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenInquiry 
       {/* PROMISE & CTA                                     */}
       {/* ================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#141414] border border-[#E2BE6A]/30 rounded-3xl p-8 sm:p-12 text-center space-y-6">
-          <h2 className="text-3xl font-extrabold font-heading text-[#F8F7F3]">
+        <div className="bg-gradient-to-r from-[#EFECE6] via-white to-[#EFECE6] border border-[#C59B27]/40 rounded-3xl p-8 sm:p-12 text-center space-y-6 shadow-xl gold-border-glow">
+          <h2 className="text-3xl font-extrabold font-heading text-[#1A1815]">
             Our Institutional Promise
           </h2>
-          <p className="text-sm text-[#9A9A9A] max-w-2xl mx-auto font-body leading-relaxed">
+          <p className="text-sm text-[#5C564E] max-w-2xl mx-auto font-body leading-relaxed">
             At Lunar Gold Art, we do more than create art—we cultivate ideas, develop talent, embrace innovation, and build creative ecosystems that leave a lasting legacy.
           </p>
           <button
             onClick={() => onOpenInquiry('About Page Promise')}
-            className="py-3.5 px-8 rounded-full bg-gradient-to-r from-[#E2BE6A] to-[#C9A14A] text-[#050505] font-semibold text-xs hover:brightness-110 transition-all shadow-xl inline-flex items-center gap-2"
+            className="py-3.5 px-8 rounded-full bg-gradient-to-r from-[#C59B27] to-[#A88118] text-white font-semibold text-xs hover:brightness-110 transition-all shadow-xl inline-flex items-center gap-2"
           >
             <span>Partner With Our Curatorial Team</span>
             <ArrowRight className="w-4 h-4" />

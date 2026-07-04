@@ -24,9 +24,9 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#141414] border border-[#E2BE6A]/30 text-xs text-[#E2BE6A] font-semibold uppercase tracking-wider"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#C59B27]/40 text-xs text-[#A88118] font-bold uppercase tracking-wider shadow-xs"
         >
-          <Users className="w-3.5 h-3.5 text-[#E2BE6A]" />
+          <Users className="w-3.5 h-3.5 text-[#A88118]" />
           <span>The Interconnected Ecosystem</span>
         </motion.div>
 
@@ -34,7 +34,7 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-4xl sm:text-6xl font-extrabold font-heading text-[#F8F7F3] max-w-4xl mx-auto leading-tight"
+          className="text-4xl sm:text-6xl font-extrabold font-heading text-[#1A1815] max-w-4xl mx-auto leading-tight"
         >
           Our Creative Family & Independent Initiatives.
         </motion.h1>
@@ -43,7 +43,7 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-base sm:text-lg text-[#9A9A9A] max-w-3xl mx-auto font-body leading-relaxed"
+          className="text-base sm:text-lg text-[#5C564E] max-w-3xl mx-auto font-body leading-relaxed"
         >
           Lunar Gold Art is home to several specialized creative initiatives. Each maintains its distinct cultural identity while sharing one overarching vision for innovation and global impact.
         </motion.p>
@@ -53,33 +53,33 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
       {/* FEATURED FLAGSHIP: KENZIYA AFRIKA                 */}
       {/* ================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#141414] border border-[#E2BE6A]/40 rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl gold-border-glow relative overflow-hidden">
+        <div className="bg-gradient-to-r from-[#EFECE6] via-white to-[#EFECE6] border border-[#C59B27]/40 rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl gold-border-glow relative overflow-hidden">
           {/* Subtle Accent Glow */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#E2BE6A]/10 blur-[120px] pointer-events-none rounded-full" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#C59B27]/10 blur-[120px] pointer-events-none rounded-full" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E2BE6A]/10 text-[#E2BE6A] border border-[#E2BE6A]/30 text-xs font-semibold">
-                <Globe className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 text-[#A88118] border border-[#C59B27]/40 text-xs font-bold shadow-xs">
+                <Globe className="w-3.5 h-3.5 text-[#A88118]" />
                 <span>Flagship African Initiative</span>
               </div>
 
-              <h2 className="text-3xl sm:text-5xl font-extrabold text-[#F8F7F3] font-heading">
+              <h2 className="text-3xl sm:text-5xl font-extrabold text-[#1A1815] font-heading">
                 Kenziya Afrika
               </h2>
 
-              <p className="text-base text-[#E2BE6A] font-semibold font-heading">
+              <p className="text-base text-[#A88118] font-bold font-heading">
                 Celebrating Extraordinary African Artistic Excellence
               </p>
 
-              <p className="text-sm text-[#9A9A9A] leading-relaxed font-body">
-                Recognized through <a href="https://kenziyaafrika.com" target="_blank" rel="noopener noreferrer" className="text-[#E2BE6A] underline font-semibold">kenziyaafrika.com</a> for its exceptional celebration of African creativity, contemporary fine art, and cultural heritage, Kenziya Afrika elevates visionary African masters and emerging talents to global acclaim.
+              <p className="text-sm text-[#5C564E] leading-relaxed font-body">
+                Recognized through <a href="https://kenziyaafrika.com" target="_blank" rel="noopener noreferrer" className="text-[#A88118] underline font-bold">kenziyaafrika.com</a> for its exceptional celebration of African creativity, contemporary fine art, and cultural heritage, Kenziya Afrika elevates visionary African masters and emerging talents to global acclaim.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 {CREATIVE_FAMILY[0].highlights.map((h) => (
-                  <div key={h} className="p-3 rounded-xl bg-[#050505] border border-[#222222] text-xs text-[#F8F7F3] font-medium flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-[#E2BE6A]" />
+                  <div key={h} className="p-3 rounded-xl bg-white border border-[#DCD6CB] text-xs text-[#1A1815] font-medium flex items-center gap-2 shadow-xs">
+                    <div className="w-2 h-2 rounded-full bg-[#C59B27]" />
                     <span>{h}</span>
                   </div>
                 ))}
@@ -90,7 +90,7 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
                   href="https://kenziyaafrika.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-3.5 px-7 rounded-full bg-gradient-to-r from-[#E2BE6A] to-[#C9A14A] text-[#050505] font-semibold text-xs hover:brightness-110 transition-all shadow-xl flex items-center gap-2"
+                  className="py-3.5 px-7 rounded-full bg-gradient-to-r from-[#C59B27] to-[#A88118] text-white font-semibold text-xs hover:brightness-110 transition-all shadow-xl flex items-center gap-2"
                 >
                   <span>Visit kenziyaafrika.com</span>
                   <ExternalLink className="w-4 h-4" />
@@ -98,7 +98,7 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
 
                 <button
                   onClick={() => onOpenInquiry('Kenziya Afrika Partnership')}
-                  className="py-3.5 px-7 rounded-full bg-[#050505] hover:bg-[#1A1A1A] text-[#F8F7F3] font-semibold text-xs border border-[#333333] transition-all"
+                  className="py-3.5 px-7 rounded-full bg-white hover:bg-[#FAF8F5] text-[#1A1815] font-semibold text-xs border border-[#DCD6CB] hover:border-[#C59B27] transition-all shadow-sm"
                 >
                   Propose Kenziya Afrika Exhibition
                 </button>
@@ -106,15 +106,15 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
             </div>
 
             <div className="lg:col-span-5">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#050505] border border-[#E2BE6A]/30 p-2 shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EFECE6] border border-[#C59B27]/40 p-2 shadow-xl">
                 <ImageWithFallback
                   src={CREATIVE_FAMILY[0].image}
                   alt="Kenziya Afrika Fine Art Gallery"
                   className="w-full h-full object-cover rounded-xl"
                   containerClassName="w-full h-full rounded-xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-[#050505]/85 backdrop-blur-md border border-[#222222] text-xs text-[#E2BE6A] font-semibold">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1815]/30 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-[#DCD6CB] text-xs text-[#A88118] font-bold shadow-sm">
                   Dedicated African Fine Art Curation & Global Placement
                 </div>
               </div>
@@ -128,13 +128,13 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
       {/* ================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs font-bold text-[#E2BE6A] uppercase tracking-wider font-heading">
+          <span className="text-xs font-bold text-[#A88118] uppercase tracking-wider font-heading">
             Ecosystem Structure
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold font-heading text-[#F8F7F3]">
+          <h2 className="text-3xl sm:text-4xl font-bold font-heading text-[#1A1815]">
             Explore All Divisions
           </h2>
-          <p className="text-xs sm:text-sm text-[#9A9A9A] font-body">
+          <p className="text-xs sm:text-sm text-[#5C564E] font-body">
             How each initiative connects under Lunar Gold Art while maintaining its own identity.
           </p>
         </div>
@@ -143,11 +143,11 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
           {CREATIVE_FAMILY.map((division) => (
             <div
               key={division.id}
-              className="bg-[#141414] border border-[#222222] hover:border-[#E2BE6A]/40 rounded-2xl overflow-hidden p-6 sm:p-8 space-y-6 flex flex-col justify-between transition-all shadow-lg"
+              className="bg-white border border-[#DCD6CB] hover:border-[#C59B27] rounded-2xl overflow-hidden p-6 sm:p-8 space-y-6 flex flex-col justify-between transition-all shadow-md hover:shadow-xl"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="px-3 py-1 rounded-full bg-[#050505] text-[10px] text-[#E2BE6A] font-semibold border border-[#E2BE6A]/30">
+                  <span className="px-3 py-1 rounded-full bg-[#FAF8F5] text-[10px] text-[#A88118] font-bold border border-[#C59B27]/30">
                     {division.category}
                   </span>
                   {division.website && (
@@ -155,7 +155,7 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
                       href={division.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-[#E2BE6A] hover:underline font-semibold flex items-center gap-1"
+                      className="text-xs text-[#A88118] hover:underline font-bold flex items-center gap-1"
                     >
                       <span>{division.website.replace('https://', '')}</span>
                       <ExternalLink className="w-3 h-3" />
@@ -163,7 +163,7 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
                   )}
                 </div>
 
-                <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-[#050505]">
+                <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-[#EFECE6]">
                   <ImageWithFallback
                     src={division.image}
                     alt={division.name}
@@ -173,25 +173,25 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-[#F8F7F3] font-heading">
+                  <h3 className="text-2xl font-bold text-[#1A1815] font-heading">
                     {division.name}
                   </h3>
-                  <div className="text-xs text-[#E2BE6A] font-medium mt-1">
+                  <div className="text-xs text-[#A88118] font-bold mt-1">
                     {division.tagline}
                   </div>
-                  <p className="text-xs text-[#9A9A9A] leading-relaxed font-body mt-2">
+                  <p className="text-xs text-[#5C564E] leading-relaxed font-body mt-2">
                     {division.description}
                   </p>
                 </div>
 
                 <div className="space-y-1.5 pt-2">
-                  <div className="text-[11px] font-semibold text-[#F8F7F3] uppercase tracking-wider">
+                  <div className="text-[11px] font-bold text-[#1A1815] uppercase tracking-wider">
                     Core Focus Highlights:
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#9A9A9A]">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#5C564E]">
                     {division.highlights.map((item) => (
                       <div key={item} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#E2BE6A]" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#C59B27]" />
                         <span>{item}</span>
                       </div>
                     ))}
@@ -199,10 +199,10 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-[#222222]">
+              <div className="pt-4 border-t border-[#DCD6CB]">
                 <button
                   onClick={() => onOpenInquiry(`Division Inquiry: ${division.name}`)}
-                  className="w-full py-2.5 px-4 rounded-xl bg-[#050505] hover:bg-[#1C1C1C] text-[#F8F7F3] hover:text-[#E2BE6A] font-semibold text-xs border border-[#333333] transition-all flex items-center justify-center gap-2"
+                  className="w-full py-2.5 px-4 rounded-xl bg-[#FAF8F5] hover:bg-white text-[#1A1815] hover:text-[#A88118] font-bold text-xs border border-[#DCD6CB] hover:border-[#C59B27] transition-all flex items-center justify-center gap-2 shadow-xs"
                 >
                   <span>Connect With {division.name}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -217,22 +217,22 @@ export const CreativeFamilyPage: React.FC<CreativeFamilyPageProps> = ({ onNaviga
       {/* ARCHITECTURAL CONNECTION DIAGRAM                  */}
       {/* ================================================= */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#141414] border border-[#E2BE6A]/30 rounded-3xl p-8 sm:p-12 text-center space-y-8">
+        <div className="bg-white border border-[#C59B27]/40 rounded-3xl p-8 sm:p-12 text-center space-y-8 shadow-xl">
           <div className="max-w-2xl mx-auto space-y-2">
-            <span className="text-xs font-bold text-[#E2BE6A] uppercase tracking-wider font-heading">
+            <span className="text-xs font-bold text-[#A88118] uppercase tracking-wider font-heading">
               Ecosystem Governance
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold font-heading text-[#F8F7F3]">
+            <h2 className="text-2xl sm:text-3xl font-bold font-heading text-[#1A1815]">
               The Lunar Gold Art Nexus
             </h2>
-            <p className="text-xs sm:text-sm text-[#9A9A9A] font-body leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#5C564E] font-body leading-relaxed">
               Every initiative receives curatorial oversight, technology access from Lunar Tech Labs, and financial stewardship from the parent organization.
             </p>
           </div>
 
-          <div className="p-6 bg-[#050505] rounded-2xl border border-[#222222] inline-block text-center space-y-2">
-            <div className="text-lg font-bold text-[#E2BE6A] font-heading">LUNAR GOLD ART (Parent Institution)</div>
-            <div className="text-xs text-[#9A9A9A]">Shared Vision • Curation Standards • Resource Allocation • Global Reach</div>
+          <div className="p-6 bg-[#FAF8F5] rounded-2xl border border-[#DCD6CB] inline-block text-center space-y-2 shadow-sm">
+            <div className="text-lg font-bold text-[#A88118] font-heading">LUNAR GOLD ART (Parent Institution)</div>
+            <div className="text-xs text-[#5C564E] font-medium">Shared Vision • Curation Standards • Resource Allocation • Global Reach</div>
           </div>
         </div>
       </section>

@@ -36,7 +36,7 @@ export const LogoMark: React.FC<LogoMarkProps> = ({
   const isSvgFallback = sourceIndex >= sources.length;
 
   return (
-    <div className={`relative flex items-center justify-center overflow-hidden rounded-full bg-[#050505] ${className}`} style={style}>
+    <div className={`relative flex items-center justify-center overflow-hidden rounded-full bg-[#1A1815] ${className}`} style={style}>
       {showGlow && (
         <div className="absolute inset-0 bg-[#E2BE6A]/30 rounded-full blur-md pointer-events-none" />
       )}

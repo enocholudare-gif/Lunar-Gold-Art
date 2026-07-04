@@ -38,7 +38,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-[#F8F7F3] flex flex-col font-body selection:bg-[#E2BE6A] selection:text-[#050505]">
+    <div className="min-h-screen bg-[#F5F3EE] text-[#1A1815] flex flex-col font-body selection:bg-[#C59B27] selection:text-white">
       {/* Sticky Top Navigation */}
       <Navbar
         currentPage={currentPage}
