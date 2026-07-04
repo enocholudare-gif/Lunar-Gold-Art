@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Sparkles } from 'lucide-react';
+import fineArtPaintingStudio from '../assets/images/fine_art_painting_studio_1783113458918.jpg';
+import heroArtworkGold from '../assets/images/hero_artwork_gold_1783113004311.jpg';
 
 interface ImageWithFallbackProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
@@ -12,21 +14,33 @@ interface ImageWithFallbackProps extends React.ImgHTMLAttributes<HTMLImageElemen
 export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
   src,
   alt,
-  fallbackSrc = 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=1000&auto=format&fit=crop',
+  fallbackSrc,
   className = 'w-full h-full object-cover',
   containerClassName = 'w-full h-full',
   ...props
 }) => {
-  const [imageSrc, setImageSrc] = useState<string>(src);
+  const [attemptIndex, setAttemptIndex] = useState<number>(0);
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const imgRef = useRef<HTMLImageElement>(null);
 
+  // Fallback chain: primary src -> custom fallbackSrc -> local bundled artwork -> backup bundled artwork
+  const sources = React.useMemo(() => {
+    const list: string[] = [];
+    if (src) list.push(src);
+    if (fallbackSrc && fallbackSrc !== src) list.push(fallbackSrc);
+    if (!list.includes(fineArtPaintingStudio)) list.push(fineArtPaintingStudio);
+    if (!list.includes(heroArtworkGold)) list.push(heroArtworkGold);
+    return list;
+  }, [src, fallbackSrc]);
+
+  const currentSrc = sources[attemptIndex] || sources[0];
+
   useEffect(() => {
-    setImageSrc(src);
+    setAttemptIndex(0);
     setHasError(false);
     setIsLoading(true);
-  }, [src]);
+  }, [src, fallbackSrc]);
 
   // Handle cached or quickly loaded images
   useEffect(() => {
@@ -35,15 +49,13 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
         setIsLoading(false);
       }
     }
-  }, [imageSrc]);
+  }, [currentSrc]);
 
   const handleError = () => {
-    if (!hasError && fallbackSrc && imageSrc !== fallbackSrc) {
-      // First try switching to fallbackSrc without declaring fatal error immediately
-      setImageSrc(fallbackSrc);
+    if (attemptIndex < sources.length - 1) {
+      setAttemptIndex((prev) => prev + 1);
       setIsLoading(true);
     } else {
-      // Both primary and fallback image failed
       setHasError(true);
       setIsLoading(false);
     }
@@ -67,8 +79,9 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
         <img
           {...props}
           ref={imgRef}
-          src={imageSrc}
+          src={currentSrc}
           alt={alt}
+          referrerPolicy="no-referrer"
           onLoad={handleLoad}
           onError={handleError}
           className={`${className} relative z-1 transition-opacity duration-300 ${
@@ -81,8 +94,10 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
           <div className="w-10 h-10 rounded-full bg-white border border-[#C59B27]/40 flex items-center justify-center text-[#A88118] shadow-sm">
             <Sparkles className="w-5 h-5 animate-pulse" />
           </div>
+          <span className="text-xs font-semibold text-[#8A641A] max-w-[80%] line-clamp-2">{alt}</span>
         </div>
       )}
     </div>
   );
 };
+

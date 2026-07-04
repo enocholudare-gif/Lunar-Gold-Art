@@ -196,7 +196,7 @@ export const CREATIVE_FAMILY: CreativeDivision[] = [
     name: 'Gallery Exhibitions',
     tagline: 'Physical Museums & Gallery Spaces',
     description: 'Managing bespoke gallery spaces and exhibition pavilions globally. Creating serene, minimalist environments where art can be experienced with reverence and intimacy.',
-    image: exhibitionImg,
+    image: 'https://img.sanishtech.com/u/097a2c65456e45178d0b97746feed0b4.webp',
     category: 'Exhibition Network',
     highlights: [
       'International Gallery Pavilion Network',
@@ -211,7 +211,7 @@ export const CREATIVE_FAMILY: CreativeDivision[] = [
     name: 'Horizon Residency',
     tagline: 'Global Artist Incubator & Fellowships',
     description: 'An international residency initiative providing selected artists with spacious studio retreats, stipend grants, material support, and direct mentorship from industry visionaries.',
-    image: artistImg,
+    image: 'https://img.sanishtech.com/u/9d555710cf54f4d052bb5a61c8505669.jpg',
     category: 'Artist Incubator',
     highlights: [
       'Fully Funded Studio Residencies',

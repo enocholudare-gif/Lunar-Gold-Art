@@ -44,6 +44,7 @@ export const LogoMark: React.FC<LogoMarkProps> = ({
         <img
           src={sources[sourceIndex]}
           alt="Lunar Gold Art Logo"
+          referrerPolicy="no-referrer"
           onError={handleImageError}
           className="w-full h-full object-cover rounded-full relative z-10"
         />
